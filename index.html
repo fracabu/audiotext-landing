@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AudioText Pro - Rendi i tuoi contenuti accessibili a tutti attraverso conversione audio-testo e traduzioni">
+    <title>AudioText Pro - Contenuti Accessibili per Tutti</title>
+    
+    <!-- Preload di risorse critiche -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Preconnect per CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Anti-FOUC script -->
+    <script>document.documentElement.classList.add('no-js');</script>
+    
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="font-sans antialiased transition-colors">
+    <!-- Background Canvas -->
+    <canvas id="particleCanvas" class="fixed inset-0 z-0 w-full h-full" aria-hidden="true"></canvas>
+
+    <div class="content-wrapper relative z-10 w-full">
+        <!-- Navbar/Header -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-blur-sm transition-all" role="navigation" aria-label="Menu principale">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <!-- <a href="#" class="flex items-center" aria-label="Home">
+                    <img 
+                        src="" 
+                        alt="AudioText Pro Logo" 
+                        class="h-12 transition-transform hover:scale-105"
+                        loading="eager"
+                        width="48"
+                        height="48"
+                    >
+                </a> -->
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="theme-section-dark min-h-screen flex items-center justify-center w-full relative" role="banner">
+            <!-- Theme Toggle Switch -->
+            <div class="absolute top-24 right-6 md:right-12 flex items-center">
+                <label class="theme-switch relative inline-block" for="themeToggle">
+                    <input 
+                        type="checkbox" 
+                        id="themeToggle"
+                        onclick="toggleDarkMode()" 
+                        class="sr-only"
+                        aria-label="Cambia tema del sito"
+                    >
+                    <span class="slider round" aria-hidden="true"></span>
+                </label>
+            </div>
+            
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="hero-title text-6xl font-bold mb-8 leading-tight">
+                    Rendi i Tuoi Contenuti<br>Accessibili a Tutti
+                </h1>
+                <p class="hero-subtitle text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                    Trasforma, ascolta e condividi i tuoi contenuti<br>in modo inclusivo ed efficace
+                </p>
+                <button 
+                    class="hero-button bg-red-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors"
+                    aria-label="Scopri come iniziare ad usare AudioText Pro"
+                >
+                    Scopri Come Iniziare
+                </button>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section class="theme-section-light py-32" aria-labelledby="features-title">
+            <div class="container mx-auto px-6">
+                <h2 id="features-title" class="text-4xl font-bold text-center mb-20 hero-title">
+                    Soluzioni per Ogni Esigenza
+                </h2>
+                <div class="grid md:grid-cols-3 gap-16">
+                    <!-- Card 1: Audio to Text -->
+                    <div class="feature-card p-10 rounded-2xl shadow-lg border border-gray-100 backdrop-blur-sm" role="article">
+                        <div class="theme-bg-accent p-4 rounded-full w-16 h-16 flex items-center justify-center mb-8">
+                            <i class="fas fa-headphones text-2xl text-red-600" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-6">Da Audio a Testo</h3>
+                        <p class="theme-text mb-8 leading-relaxed">
+                            Trasforma le tue registrazioni audio in testo scritto, rendendo i contenuti accessibili a chi preferisce o necessita della lettura. Perfetto per lezioni, meeting e contenuti formativi.
+                        </p>
+                        <ul class="theme-text space-y-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Trascrizione precisa e affidabile
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Supporto per diverse lingue
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Formattazione ottimizzata per la lettura
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Text to Audio -->
+                    <div class="feature-card p-10 rounded-2xl shadow-lg border border-gray-100 backdrop-blur-sm" role="article">
+                        <div class="theme-bg-accent p-4 rounded-full w-16 h-16 flex items-center justify-center mb-8">
+                            <i class="fas fa-book-reader text-2xl text-red-600" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-6">Da Testo ad Audio</h3>
+                        <p class="theme-text mb-8 leading-relaxed">
+                            Trasforma i tuoi testi in audio naturale e coinvolgente. Ideale per il multitasking e per chi preferisce l'apprendimento uditivo. Rendi i tuoi contenuti fruibili in ogni momento.
+                        </p>
+                        <ul class="theme-text space-y-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Voci naturali e piacevoli
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Controllo della velocità di lettura
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Perfetto per la mobilità
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Universal Design -->
+                    <div class="feature-card p-10 rounded-2xl shadow-lg border border-gray-100 backdrop-blur-sm" role="article">
+                        <div class="theme-bg-accent p-4 rounded-full w-16 h-16 flex items-center justify-center mb-8">
+                            <i class="fas fa-universal-access text-2xl text-red-600" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-6">Design Universale</h3>
+                        <p class="theme-text mb-8 leading-relaxed">
+                            Creiamo ponti di comunicazione. La nostra tecnologia rende i contenuti accessibili a tutti, rispettando ogni preferenza e necessità di fruizione dei contenuti.
+                        </p>
+                        <ul class="theme-text space-y-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Standard di accessibilità WCAG 2.1
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Interfaccia intuitiva
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-red-600 mr-3" aria-hidden="true"></i>
+                                Supporto multipiattaforma
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="theme-section-dark py-32 text-center" aria-labelledby="cta-title">
+            <div class="container mx-auto px-6">
+                <h2 id="cta-title" class="hero-title text-5xl font-bold mb-8">
+                    Rendi i Tuoi Contenuti<br>Universalmente Accessibili
+                </h2>
+                <p class="hero-subtitle text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                    Scopri come la nostra tecnologia può aiutarti<br>a raggiungere un pubblico più ampio
+                </p>
+                <button 
+                    class="hero-button bg-red-600 text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors"
+                    aria-label="Richiedi una demo di AudioText Pro"
+                >
+                    Richiedi una Demo
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="theme-section-light py-12" role="contentinfo">
+            <div class="container mx-auto px-6 text-center theme-text">
+                <p class="mb-6">AudioText Pro - Tecnologia al servizio dell'inclusione</p>
+                <nav aria-label="Footer navigation">
+                    <div class="flex justify-center space-x-8">
+                        <a href="#" class="hover:text-red-600 transition-colors">Privacy</a>
+                        <a href="#" class="hover:text-red-600 transition-colors">Termini</a>
+                        <a href="#" class="hover:text-red-600 transition-colors">Contatti</a>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
