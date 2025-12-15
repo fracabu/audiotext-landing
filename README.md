@@ -1,62 +1,85 @@
-# AudioText Landing Page
+<h1 align="center">AudioText Landing</h1>
+<h3 align="center">Audio-to-Text Conversion Service</h3>
 
-Questa repository contiene il codice sorgente della landing page per **Audio-Text**, un'applicazione progettata per convertire file audio in testo scritto in modo efficiente e accurato.
+<p align="center">
+  <em>Landing page for audio transcription application</em>
+</p>
 
-## Descrizione del Progetto
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Audio-9C27B0?style=flat-square" alt="Audio" />
+</p>
 
-La landing page di AudioText è stata sviluppata per presentare le funzionalità principali dell'applicazione, offrendo agli utenti una panoramica chiara dei servizi offerti. La pagina è stata realizzata utilizzando tecnologie web moderne per garantire una navigazione fluida e un design responsivo.
+<p align="center">
+  :gb: <a href="#english">English</a> | :it: <a href="#italiano">Italiano</a>
+</p>
 
-## Tecnologie Utilizzate
+---
 
-- **HTML5**: Struttura semantica della pagina.
-- **CSS3**: Stile e layout responsivo.
-- **JavaScript**: Interattività e dinamismo della pagina.
+<a name="english"></a>
+## :gb: English
 
-## Struttura del Progetto
+### Overview
 
-- `index.html`: File principale che contiene la struttura della landing page.
-- `assets/`: Directory che include risorse come immagini, icone e file multimediali.
-  - `css/`: Fogli di stile CSS.
-  - `js/`: Script JavaScript.
-  - `images/`: Immagini utilizzate nella pagina.
+A modern landing page for AudioText, a web application that converts audio files to text. Clean design showcasing transcription features.
 
-## Installazione
+### Features
 
-Per visualizzare la landing page in locale:
+- **Service Overview** - Clear value proposition
+- **Feature Showcase** - Highlight transcription capabilities
+- **Use Cases** - Demonstrate practical applications
+- **Pricing Plans** - Display service tiers
+- **Responsive Design** - Mobile-friendly layout
 
-1. **Clona il repository**:
+### Quick Start
 
-   ```bash
-   git clone https://github.com/fracabu/audiotext-landing.git
-   ```
+```bash
+git clone https://github.com/fracabu/audiotext-landing.git
+cd audiotext-landing
+# Open index.html in browser
+```
 
-2. **Accedi alla directory del progetto**:
+---
 
-   ```bash
-   cd audiotext-landing
-   ```
+<a name="italiano"></a>
+## :it: Italiano
 
-3. **Apri il file `index.html`** nel tuo browser preferito.
+### Panoramica
 
-## Contributi
+Landing page moderna per AudioText, un'applicazione web che converte file audio in testo. Design pulito che mostra le funzionalita di trascrizione.
 
-Contributi per migliorare la landing page sono benvenuti! Se desideri contribuire:
+### Funzionalita
 
-1. Fai un fork del repository.
-2. Crea un branch per la tua feature (`git checkout -b feature/nome-feature`).
-3. Committa le tue modifiche (`git commit -m 'Aggiunta di una nuova feature'`).
-4. Fai push al branch (`git push origin feature/nome-feature`).
-5. Apri una Pull Request.
+- **Panoramica Servizio** - Proposta di valore chiara
+- **Vetrina Features** - Evidenzia capacita trascrizione
+- **Casi d'Uso** - Dimostra applicazioni pratiche
+- **Piani Prezzo** - Visualizza livelli servizio
+- **Design Responsive** - Layout mobile-friendly
 
-## Licenza
+### Avvio Rapido
 
-Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
+```bash
+git clone https://github.com/fracabu/audiotext-landing.git
+cd audiotext-landing
+# Apri index.html nel browser
+```
 
-## Contatti
+---
 
-Per domande o suggerimenti:
+## Tech Stack
 
-- **Email**: fracabu@gmail.com
-- **LinkedIn**: [Francesco Capurso](https://www.linkedin.com/in/francesco-~-capurso-5801031a9/)
+- HTML5, CSS3, JavaScript
 
+## License
 
+MIT
+
+---
+
+<p align="center">
+  <a href="https://github.com/fracabu">
+    <img src="https://img.shields.io/badge/Made_by-fracabu-8B5CF6?style=flat-square" alt="Made by fracabu" />
+  </a>
+</p>
